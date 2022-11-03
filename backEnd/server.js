@@ -1,3 +1,4 @@
+const dotenv = require('dotenv').config();
 const express=require('express')
 const connectDB =require('./server/index')
 const app=express()
@@ -8,6 +9,8 @@ app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 app.use('/product',products)
+
+app.use('/api/users', require('./router/userRoutes'));
 
 let port =3000
 
