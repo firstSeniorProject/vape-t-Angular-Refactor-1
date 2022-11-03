@@ -16,6 +16,7 @@ export class SignupComponent implements OnInit {
 
   public signupForm !: FormGroup;
   emailvalue!: string
+  
   constructor(private router: Router, 
               private http: HttpClient,
              // private service:ConfigService,
@@ -34,8 +35,10 @@ export class SignupComponent implements OnInit {
 
     console.log(this.signupForm.value)
     this.http.post<any>("http://localhost:3000/api/users/", this.signupForm.value)
-    .subscribe((res => {alert("Sign Up Success")}));
-    this.signupForm.reset();
-    this.router.navigate(['login']);
+    .subscribe(res => {
+      alert("Sign Up Success");
+      this.signupForm.reset();
+      this.router.navigate(['login']);
+  }, err => {alert("Error: Something went wrong " + err.message)})
   }
 }
