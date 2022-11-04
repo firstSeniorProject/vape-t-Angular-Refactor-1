@@ -1,4 +1,10 @@
 <div class="container">
+  <h1 *ngIf="isAvailable">{{ user.email }}</h1>
+  <h1 *ngIf="isAvailable">{{ user.name}}</h1>
+
+  <button *ngIf="isAvailable" (click)="logOut()">log out</button>
+  <button   (click)="logIn()">log In</button>
+
   <router-outlet></router-outlet>
 </div>
 
