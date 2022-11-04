@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 
 
 export class AppComponent {
+
  user !: any;
  isAvailable !: any;
 
@@ -32,5 +33,7 @@ export class AppComponent {
     this.router.navigate(['/login']);
    
   }
-  
+
+  title = 'Vape-It'
+
 }
