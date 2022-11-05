@@ -17,11 +17,11 @@ module.exports={
     },
     findProducts:(req,res)=>{
         Products.find({},
-            (error,results)=>error?res.status(500).console.error(error):res.status(200).send(results))
+            (error,results)=>error?res.status(500).console.log(error):res.status(200).send(results))
     },
     findProduct:(req,res)=>{
-        Products.findOne({nameBrand:req.body.nameBrand},
-            (error,results)=>error?res.status(500).console.error(error):res.status(200).send(results))
+        Products.findOne({_id:req.params.id},
+            (error,results)=>error?res.status(500).console.log(error):res.status(200).send(results))
     },
     deleteProduct:(req,res)=>{
         Products.findByIdAndDelete(req.params.id,
