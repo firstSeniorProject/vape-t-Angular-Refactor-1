@@ -26,6 +26,8 @@ import { SignupComponent } from './components/signup/signup.component';
 import { HomeComponent } from './components/home/home.component';
 import { OneProductComponent } from './components/one-product/one-product.component';
 import 'tw-elements';
+import { AllProductComponent } from './components/all-product/all-product.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +36,9 @@ import 'tw-elements';
     SignupComponent,
     HomeComponent,
     SignupComponent,
-    OneProductComponent
+    OneProductComponent,
+    AllProductComponent,
+
 
   ],
   imports: [

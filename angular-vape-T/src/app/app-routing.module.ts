@@ -7,13 +7,17 @@ import { OneProductComponent } from './components/one-product/one-product.compon
 
 import { LoginComponent} from './components/login/login.component';
 import { SignupComponent} from './components/signup/signup.component';
+// import { ProductComponent } from './components/product/product.component';
+import { AllProductComponent } from './components/all-product/all-product.component';
 
 const routes: Routes = [
  // {path: '', redirecTo:'login', pathMatch: 'full'},
   {path:'',component:HomeComponent},
   {path: 'login', component:LoginComponent},
   {path: 'signup', component:SignupComponent},
-  {path:"test",component:OneProductComponent}
+  {path:"test",component:OneProductComponent},
+  // {path:"product",component:ProductComponent},
+  {path:"product",component:AllProductComponent}
 ];
 
 @NgModule({
